@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background: skyblue;
+      overflow: hidden;
+    }
+
+    /* Road */
+    .road {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: gray;
+      top: 200px;
+    }
+
+    /* Road Lines */
+    .line {
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+        to right,
+        white 0px,
+        white 50px,
+        transparent 50px,
+        transparent 100px
+      );
+      top: 95px;
+    }
+
+    /* Car */
+    .car {
+      position: absolute;
+      width: 150px;
+      bottom: 60px;
+      animation: drive 10s linear infinite;
+    }
+
+    /* Car Animation */
+    @keyframes drive {
+      from { left: -200px; }
+      to { left: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="road">
+    <div class="line"></div>
+    <img src="https://thumbs.dreamstime.com/b/colorful-rolls-royce-ghost-burning-rubber-generative-ai-346188893.jpg" class="car" alt="Car">
+  </div>
+
+</body>
+</html>
